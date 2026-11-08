@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://cpudety-bit.github.io/arh-os/sitemap.xml
+Sitemap: https://cpudety-bit.github.io/korablik-temporary/sitemap.xml
