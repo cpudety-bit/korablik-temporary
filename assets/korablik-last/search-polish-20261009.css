@@ -1,0 +1,12 @@
+/* Search experience and editorial finish. Scoped to the new Korablik homepage. */
+.site-search__routes {display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:9px 0 1px;}
+.site-search__routes>span {color:#315a76;font-size:12px;font-weight:650;}
+.site-search__routes button {padding:7px 12px;border:1px solid #bfd9e7;border-radius:999px;background:linear-gradient(180deg,#fff,#edf8fc);color:#145681;font:700 12px/1.25 "Trebuchet MS",Arial,sans-serif;cursor:pointer;box-shadow:0 2px 5px #214e7110;transition:background .22s,border-color .22s,transform .22s;}
+.site-search__routes button:hover {background:#deeff9;border-color:#77b3ce;transform:translateY(-1px);}
+.site-search__routes button:focus-visible {outline:3px solid #bd8937;outline-offset:3px;}
+.search-match-flash {outline:3px solid #cd9748;outline-offset:3px;animation:search-highlight 1.6s ease-out 1;}
+@keyframes search-highlight {0%{box-shadow:0 0 0 8px #efba6466}100%{box-shadow:0 0 0 0 #efba6400}}
+body.accessible .site-search__routes button {background:#fff!important;border:2px solid #000;color:#000;box-shadow:none;}
+body.accessible .search-match-flash{outline:3px solid #000;}
+@media(max-width:640px) {.site-search__routes{gap:7px;margin-top:9px}.site-search__routes>span{width:100%;font-size:11px}.site-search__routes button{font-size:12px;min-height:34px}}
+@media(prefers-reduced-motion:reduce){.search-match-flash{animation:none}.site-search__routes button{transition:none}}

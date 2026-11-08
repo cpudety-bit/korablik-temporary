@@ -1,0 +1,12 @@
+/* Shared maritime header on secondary CMS pages, without replacing their content or router. */
+body.theme-korablik .site-header{max-width:1600px;margin-inline:auto}
+body.theme-korablik .site-header .main-navigation{z-index:1}
+body.theme-korablik .site-header .brand{color:#12375f;text-decoration:none}
+body.theme-korablik .site-header .brand__official{display:block}
+body.theme-korablik .site-header .site-search{width:min(100% - 64px,1400px)}
+body.theme-korablik .site-header .main-navigation a{text-decoration:none}
+body.theme-korablik .site-header .main-navigation a.is-active{border-bottom-color:#d4a45b;color:#aa752a}
+body.theme-korablik .site-main{position:relative;z-index:1}
+@media(max-width:640px){body.theme-korablik .site-header .site-search{width:calc(100% - 24px)}}
+/* Match the exact approved sky backdrop of the homepage header on every inner page. */
+body.theme-korablik .site-header{background:linear-gradient(130deg,#cce9fd 0%,#f9f8f3 36%,#d4edf9 75%,#add7f3 100%);border-bottom:0;color:#10345b}

@@ -1,0 +1,1 @@
+One historical PDF and two historical image files were not present in the verified Joomla archive. Their links are disabled or shown as unavailable. All other referenced legacy media files were extracted.

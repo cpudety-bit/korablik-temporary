@@ -1,0 +1,190 @@
+/* Light nautical design for documentary safety pages, content untouched. */
+body.theme-korablik:is([data-page-path='/pages/anti-terror'],[data-page-path='/pages/information-security']) .article {
+  max-width:1120px;
+  width:100%;
+  padding:clamp(22px,3vw,45px);
+  background:linear-gradient(145deg,#fff 0%,#fbfdff 85%,#f3f9fc 100%);
+}
+body.theme-korablik:is([data-page-path='/pages/anti-terror'],[data-page-path='/pages/information-security']) .article>h1 {
+  font:500 clamp(32px,3.8vw,50px)/1.14 Georgia,'Times New Roman',serif;
+  letter-spacing:-.025em;
+  max-width:22ch;
+  margin-bottom:25px;
+}
+body.theme-korablik .safety-empty {display:none!important}
+body.theme-korablik .safety-intro {
+  isolation:isolate;position:relative;overflow:hidden;
+  display:flex;justify-content:center;flex-direction:column;
+  min-height:132px;margin:0 0 25px;
+  padding:24px clamp(21px,3vw,38px);
+  border:1px solid #246f91;border-radius:18px;
+  background:linear-gradient(105deg,#0b4569,#0f6287 65%,#3a8cab);
+  color:#f9fdff;
+}
+body.theme-korablik .safety-intro::before{
+  content:'';position:absolute;z-index:-1;pointer-events:none;
+  width:280px;height:280px;right:-50px;top:-117px;
+  border:1px solid #f1fbff25;border-radius:50%;
+  box-shadow:0 0 0 30px #defaff08,0 0 0 64px #defaff07,0 0 0 102px #defaff08;
+}
+body.theme-korablik .safety-intro__eyebrow {
+  margin:0 0 7px;
+  color:#c9eaf9;font-size:10px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;
+}
+body.theme-korablik .safety-intro__description{
+  margin:0;max-width:62ch;
+  font:500 clamp(18px,1.8vw,24px)/1.4 Georgia,'Times New Roman',serif;
+  color:#fff;
+}
+body.theme-korablik .safety-panel {
+  position:relative;overflow:hidden;margin:17px 0;
+  padding:clamp(19px,2.5vw,30px);
+  border:1px solid #d4e7ef;border-radius:17px;
+  background:#fff;
+  box-shadow:0 8px 24px #134b6710;
+}
+body.theme-korablik .safety-panel::before{
+  content:'';position:absolute;left:0;top:22px;bottom:22px;width:3px;border-radius:0 3px 3px 0;
+  background:linear-gradient(#d4ac79,#8dc6d8);
+}
+body.theme-korablik .safety-panel__title {
+  margin:0 0 17px!important;
+  font:500 clamp(23px,2.4vw,30px)/1.25 Georgia,'Times New Roman',serif!important;
+  color:#174b6d;
+}
+body.theme-korablik .safety-panel--start {
+  background:linear-gradient(130deg,#f3fafe,#fff 75%);
+}
+body.theme-korablik .safety-spotlight-links,
+body.theme-korablik .safety-link-grid {
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;
+}
+body.theme-korablik .safety-link-tile {
+  display:flex;min-width:0;min-height:98px;margin:0!important;
+  align-items:center;padding:18px 42px 18px 17px;
+  position:relative;border:1px solid #cfe4ed;border-radius:12px;
+  background:linear-gradient(140deg,#fff,#f4f9fc);
+  box-shadow:0 3px 12px #174f6908;
+}
+body.theme-korablik .safety-link-tile::after {
+  content:'↗';position:absolute;right:12px;top:calc(50% - 16px);
+  display:grid;place-items:center;width:31px;height:31px;
+  border:1px solid #badbe9;border-radius:50%;background:#fff;color:#2b7c9e;
+  font-size:17px;
+}
+body.theme-korablik .safety-link-tile a,
+body.theme-korablik .safety-link-tile a span {
+  display:inline;color:#1b5072;font-size:14px;line-height:1.48;font-weight:750;
+  text-decoration:none;overflow-wrap:anywhere;
+}
+body.theme-korablik .safety-link-tile a:hover {text-decoration:underline;text-underline-offset:3px}
+body.theme-korablik .safety-legacy-content>p:first-child{
+  margin:0 0 21px!important;
+  font:500 clamp(22px,2.35vw,29px)/1.28 Georgia,serif;
+  color:#18506f;
+}
+body.theme-korablik .safety-legacy-content>p:first-child :is(strong,span){font:inherit;color:inherit}
+body.theme-korablik .safety-legacy-content ul {
+  padding:0!important;list-style:none;margin:0!important;display:grid;gap:8px;
+}
+body.theme-korablik .safety-legacy-content ul li {
+  position:relative;margin:0!important;padding:0!important;
+  border:1px solid #e0eaf0;border-radius:11px;
+  background:#f7fbfd;
+}
+body.theme-korablik .safety-legacy-content ul li a {
+  display:block;position:relative;padding:15px 40px 15px 17px;
+  color:#185878;font-size:13.5px;line-height:1.65;text-decoration:none;
+  overflow-wrap:anywhere;
+}
+body.theme-korablik .safety-legacy-content ul li a::after{
+  content:'↗';position:absolute;right:15px;top:calc(50% - 12px);font-size:16px;color:#4b90ab;
+}
+body.theme-korablik .safety-legacy-content ul li:hover{border-color:#9fc6d8;background:#f0f8fc}
+body.theme-korablik .safety-legacy-content ul li a:hover{text-decoration:underline;text-underline-offset:3px}
+body.theme-korablik .safety-panel--emergency {
+  border-color:#eddbb9;background:linear-gradient(130deg,#fffaf0,#fff 67%);
+}
+body.theme-korablik .safety-panel--emergency::before{background:#c99044}
+body.theme-korablik .safety-emergency__headline{
+  margin:0 0 20px!important;padding:0 0 15px;
+  border-bottom:1px solid #efdec1;font:500 clamp(20px,2.3vw,29px)/1.3 Georgia,serif!important;
+  color:#7c5423;
+}
+body.theme-korablik .safety-emergency__headline :is(strong,span){font:inherit;color:inherit}
+body.theme-korablik .safety-emergency__number {
+  display:flex;align-items:center;justify-content:space-between;gap:15px;
+  margin:0!important;padding:13px 17px!important;
+  border-bottom:1px solid #f0e1cc;font-weight:750;
+  font-size:15px;line-height:1.6;color:#765328;
+}
+body.theme-korablik .safety-emergency__number:nth-of-type(2n){background:#fff4df88}
+body.theme-korablik .safety-emergency__number:last-child {border-bottom:0}
+body.theme-korablik .safety-panel--videos {background:linear-gradient(145deg,#f6fbfe,#fff)}
+body.theme-korablik .safety-panel--videos>p:first-child{
+  margin:0 0 19px!important;
+  font:500 clamp(23px,2.5vw,30px)/1.25 Georgia,serif;
+  color:#174b6d;
+}
+body.theme-korablik .safety-panel--videos>p:first-child :is(strong,span) {font:inherit;color:inherit}
+body.theme-korablik .safety-video-table {
+  display:block;width:100%;border:0!important;overflow:visible!important;
+  margin:0!important;border-radius:0!important;box-shadow:none!important;
+}
+body.theme-korablik .safety-video-table tbody {
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;
+}
+body.theme-korablik .safety-video-table tr {
+  display:flex;flex-direction:column;gap:12px;
+  padding:17px;border:1px solid #d9e9f1;border-radius:12px;
+  background:#fff;min-width:0;
+}
+body.theme-korablik .safety-video-table td {
+  display:block!important;width:auto!important;min-width:0;
+  border:0!important;padding:0!important;
+  line-height:1.54;font-size:13px;
+}
+body.theme-korablik .safety-video-table td:first-child {font-weight:650;color:#1b5074}
+body.theme-korablik .safety-video-table td p {margin:5px 0}
+body.theme-korablik .safety-video-table a {
+  display:block;color:#1a719a;text-decoration:underline;text-decoration-color:#b3dce8;
+  font-size:12px;overflow-wrap:anywhere;word-break:break-word;
+}
+body.theme-korablik .safety-panel--alerts {
+  background:linear-gradient(145deg,#edf8fc,#fff);
+}
+body.theme-korablik .safety-alerts__heading {
+  margin:0 0 19px!important;font:500 clamp(21px,2.5vw,29px)/1.32 Georgia,serif;
+  color:#174b6d;
+}
+body.theme-korablik .safety-alerts__link {
+  margin:9px 0!important;padding:13px 15px;
+  border:1px solid #d1e6ee;border-radius:10px;background:#fff;
+}
+body.theme-korablik .safety-alerts__link a{
+  color:#125d81;font-weight:700;font-size:14px;text-decoration:none;
+}
+body.theme-korablik .safety-alerts__link a:hover {text-decoration:underline}
+body.theme-korablik .safety-panel--directory .safety-link-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+body.theme-korablik .safety-panel--directory .safety-link-tile{min-height:115px}
+body.theme-korablik .safety-panel--directory .safety-link-tile:last-child:nth-child(odd){grid-column:1/-1}
+@media(max-width:800px){
+  body.theme-korablik .safety-spotlight-links,
+  body.theme-korablik .safety-link-grid{grid-template-columns:1fr}
+  body.theme-korablik .safety-video-table tbody{grid-template-columns:1fr}
+  body.theme-korablik .safety-panel--directory .safety-link-grid{grid-template-columns:1fr}
+  body.theme-korablik .safety-panel--directory .safety-link-tile:last-child:nth-child(odd){grid-column:1}
+}
+@media(max-width:520px){
+  body.theme-korablik:is([data-page-path='/pages/anti-terror'],[data-page-path='/pages/information-security']) .article {padding:20px 14px;border-radius:17px}
+  body.theme-korablik .safety-intro {padding:19px 17px;border-radius:13px;min-height:117px}
+  body.theme-korablik .safety-panel {padding:20px 15px;border-radius:13px;margin:13px 0}
+  body.theme-korablik .safety-link-tile {min-height:79px;padding:13px 39px 13px 13px}
+  body.theme-korablik .safety-link-tile a {font-size:13px}
+  body.theme-korablik .safety-legacy-content ul li a {font-size:12.5px;padding:13px 33px 13px 12px}
+  body.theme-korablik .safety-emergency__number {padding:11px 9px!important;font-size:13px}
+}
+body.theme-korablik.accessible .safety-intro,
+body.theme-korablik.accessible .safety-panel,
+body.theme-korablik.accessible .safety-link-tile {background:#fff!important;border:2px solid #000!important;color:#000!important}
+@media(prefers-reduced-motion:reduce){body.theme-korablik .safety-link-tile,body.theme-korablik .safety-legacy-content ul li{transition:none}}

@@ -1,0 +1,24 @@
+/* Prominent native social links and identifiable resource banners. */
+.korablik-social{margin-top:32px;padding:29px 32px;border:1px solid #c9e2ed;border-radius:24px;background:linear-gradient(125deg,#e8f6fd,#fff9ee 75%);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.korablik-social h2{font:500 clamp(28px,2.8vw,39px)/1.12 Georgia,serif;color:#10385e;margin:0 0 8px}
+.korablik-social p{margin:0;color:#50718b;font-size:15px;line-height:1.5}
+.korablik-social__links{display:flex;flex-wrap:wrap;gap:12px}
+.korablik-social__links a{display:flex;align-items:center;gap:12px;min-width:158px;padding:15px 20px;border-radius:15px;background:#fff;border:1px solid #cbdfea;color:#104b77;font-weight:800;font-size:16px;box-shadow:0 8px 19px #245b7b14;transition:transform .2s,box-shadow .2s}
+.korablik-social__links a:hover{transform:translateY(-3px);box-shadow:0 12px 24px #245b7b24}
+.korablik-social__mark{display:grid;place-items:center;flex:none;width:45px;height:45px;border-radius:12px;color:#fff;background:#2779ba;font-weight:900;font-size:16px}
+.korablik-social__links a:nth-child(2) .korablik-social__mark{background:#229bd2;font-size:24px}
+.korablik-social__links a:nth-child(3) .korablik-social__mark{background:#ed8a24}
+.resource-section{padding-top:44px}
+.resource-section .resource-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.resource-section .resource-card{min-height:176px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:12px;padding:18px 15px;border-radius:17px}
+.resource-section .resource-card img{flex:0 0 auto;width:100%;height:100px;max-width:200px;object-fit:contain;mix-blend-mode:normal}
+.resource-section .resource-card>span:not(.external){font-size:15px;line-height:1.35;font-weight:750;flex:none}
+.resource-section .resource-card .external{position:absolute;right:12px;top:8px;align-self:auto}
+.resource-section .resource-card{position:relative}
+.resource-section .more-resources summary{font-size:16px;padding:18px 20px}
+.resource-section .more-resources__grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:4px 18px 20px}
+.resource-section .more-resources__grid a{display:flex;align-items:center;gap:12px;min-height:100px;padding:13px;border-radius:13px;border:1px solid #d5e7ee;background:#fff;font-size:14px;font-weight:650;text-decoration:none}
+.resource-section .more-resources__grid a img{width:84px;height:74px;flex:0 0 84px;object-fit:contain}
+@media(max-width:1050px){.korablik-social{flex-direction:column;align-items:stretch}.resource-section .resource-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.resource-section .more-resources__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:660px){.korablik-social{padding:22px 18px;margin-top:22px}.korablik-social__links{display:grid;grid-template-columns:1fr;gap:8px}.korablik-social__links a{min-width:0;padding:10px 13px}.resource-section .resource-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.resource-section .resource-card{min-height:156px;padding:14px 10px}.resource-section .resource-card img{height:83px}.resource-section .resource-card>span:not(.external){font-size:13px}.resource-section .more-resources__grid{grid-template-columns:1fr}.resource-section .more-resources__grid a img{width:80px;height:70px;flex-basis:80px}}
+@media(prefers-reduced-motion:reduce){.korablik-social__links a{transition:none}.korablik-social__links a:hover{transform:none}}

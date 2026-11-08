@@ -1,0 +1,24 @@
+/* Verified official and legacy sections, an accessible navigation directory. */
+.official-guide{margin-block:45px 55px;padding:26px 28px 29px!important;border:1px solid #d6e5ed;border-radius:22px;background:linear-gradient(143deg,#f1f9fd 0%,#fffdf8 76%);box-shadow:0 10px 28px #0f446313}
+.official-guide__top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:23px}
+.official-guide__eyebrow{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#a77132;margin:0 0 8px}
+.official-guide h2{font:500 clamp(27px,2.65vw,40px)/1.15 Georgia,serif;letter-spacing:-.025em;color:#153f63;margin:0 0 10px}
+.official-guide__lead{max-width:690px;color:#53758a;font-size:14px;line-height:1.55;margin:0}
+.official-guide__all{display:inline-flex;align-items:center;gap:8px;flex:none;min-height:43px;padding:8px 17px;border-radius:25px;background:#0d6791;color:#fff!important;text-decoration:none!important;font-size:12px;font-weight:700;white-space:nowrap}
+.official-guide__all:hover{background:#084d72}
+.official-guide__groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.official-guide__group{min-width:0;padding:19px 20px;border:1px solid #deebf2;border-radius:15px;background:#fff;box-shadow:0 2px 9px #12456a08}
+.official-guide__group h3{margin:0 0 10px;color:#184970;font:600 23px/1.22 Georgia,serif}
+.official-guide__group ul{list-style:none;margin:0;padding:0}
+.official-guide__group li{margin:0;padding:0;border-bottom:1px solid #e8f0f4}
+.official-guide__group li:last-child{border-bottom:0}
+.official-guide__group li a{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:9px 0;color:#14567b;text-decoration:none;font-weight:600;font-size:13px;line-height:1.35}
+.official-guide__group li a:hover{text-decoration:underline}
+.official-guide__group li a span:last-child{color:#b48749;flex:none}
+.official-guide__group li small{display:block;color:#6e899b;font-size:11px;line-height:1.35;padding:0 0 7px}
+.official-guide__notice{margin:18px 0 0;color:#58788c;font-size:12px;line-height:1.5}
+body.accessible .official-guide,body.accessible .official-guide__group{background:#fff!important;color:#000!important;border-color:#000!important}
+@media(max-width:850px){.official-guide__top{display:block}.official-guide__all{margin-top:13px}.official-guide__groups{gap:11px}.official-guide__group{padding:14px}.official-guide__group h3{font-size:21px}}
+@media(max-width:600px){.official-guide{padding:19px 15px 22px!important;margin-block:29px!important}.official-guide__groups{grid-template-columns:1fr}.official-guide__group{padding:16px}.official-guide__group li a{font-size:13px}.official-guide__all{white-space:normal}}
+/* Legacy headings are longer than narrow phone screens; wrap rather than forcing horizontal scrolling. */
+@media(max-width:380px){body.theme-korablik .site-main h1{overflow-wrap:anywhere;word-break:normal;hyphens:auto}body.theme-korablik .site-footer{overflow-wrap:anywhere}}

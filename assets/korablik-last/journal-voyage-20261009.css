@@ -1,0 +1,46 @@
+/* Editorial homepage: a living journal with quiet nautical transitions. */
+.news-section{position:relative;padding-top:49px;padding-bottom:54px}
+.news-section::before{content:'';position:absolute;left:max(2%,calc((100vw - 1200px)/2));right:max(2%,calc((100vw - 1200px)/2));top:12px;height:1px;background:linear-gradient(90deg,#c3ddea,transparent)}
+.news-section .section-heading{margin-bottom:24px}
+.news-section .section-heading__left::before{content:'ИСТОРИИ НАШЕГО ПУТЕШЕСТВИЯ';display:block;margin:0 0 8px;font-size:10px;font-weight:800;letter-spacing:.17em;color:#b17d37}
+.news-section .section-heading__left::after{content:'Настоящие события, занятия и маленькие открытия из жизни «Кораблика»';max-width:620px}
+.news-section .news-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);grid-template-rows:repeat(3,minmax(0,1fr));gap:13px;align-items:stretch}
+.news-section .news-card{min-width:0;overflow:hidden;border:1px solid #dfebf1;border-radius:17px;background:#fff;box-shadow:0 7px 22px #14415d13;transform:none}
+.news-section .news-card:hover{box-shadow:0 12px 28px #14415d25;transform:translateY(-2px)}
+.news-section .news-card:first-child{grid-column:1;grid-row:1/span 3;display:flex;flex-direction:column;min-height:515px;background:linear-gradient(120deg,#fff,#f6fbfe)}
+.news-section .news-card:first-child>img,.news-section .news-card:first-child>.news-card__placeholder{width:100%;height:300px;min-height:0;max-height:none;object-fit:cover}
+.news-section .news-card:first-child .news-card__body{flex:1;padding:23px 28px 62px}
+.news-section .news-card:first-child h3{font:600 clamp(25px,2.2vw,33px)/1.13 Georgia,serif;letter-spacing:-.025em;margin:9px 0}
+.news-section .news-card:first-child p{font-size:14px;line-height:1.65;max-width:54ch}
+.news-section .news-card:not(:first-child){grid-column:2;display:grid;grid-template-columns:145px minmax(0,1fr);height:auto;min-height:154px}
+.news-section .news-card:not(:first-child)>img,.news-section .news-card:not(:first-child)>.news-card__placeholder{width:100%;height:100%;min-height:154px;max-height:none;object-fit:cover}
+.news-section .news-card:not(:first-child) .news-card__body{min-width:0;padding:17px 16px 38px}
+.news-section .news-card:not(:first-child) h3{font:600 18px/1.2 Georgia,serif;letter-spacing:-.01em;margin:5px 0 7px}
+.news-section .news-card:not(:first-child) p{font-size:12px;line-height:1.45;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.news-section .news-card time{font-size:11px;color:#927247;letter-spacing:.02em}
+.journal-card__kicker{display:block;text-transform:uppercase;font-size:10px!important;letter-spacing:.09em;color:#236c91!important;font-weight:800!important;padding:0!important;line-height:1.4!important}
+.news-section .news-card__body>a{right:15px;bottom:12px}
+.journal-all{display:inline-flex;align-items:center;gap:11px;margin-top:19px;padding:10px 18px;color:#0a597e;background:#f2f9fc;border:1px solid #d6e8ef;border-radius:24px;font-size:13px;font-weight:700;text-decoration:none}
+.journal-all:hover{border-color:#91c4da;background:#e8f6fc}
+.voyage-people{position:relative;padding-top:18px;padding-bottom:52px}
+.voyage-people__head{margin-bottom:20px}
+.voyage-people__head>span{display:block;margin-bottom:8px;color:#b17d37;font-size:10px;letter-spacing:.17em;font-weight:800;text-transform:uppercase}
+.voyage-people__head h2{font:500 clamp(27px,2.4vw,38px)/1.17 Georgia,serif;color:#123f61;margin:0 0 7px;letter-spacing:-.025em}
+.voyage-people__head p{margin:0;color:#55768c;font-size:14px;line-height:1.5}
+.voyage-people__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.voyage-people__card{position:relative;display:flex;align-items:center;min-height:155px;padding:20px 48px 20px 22px;gap:20px;background:linear-gradient(115deg,#eff9fd,#fffdf8);border:1px solid #d7e9ef;border-radius:18px;text-decoration:none;box-shadow:0 6px 24px #12456910;transition:transform .2s,box-shadow .2s}
+.voyage-people__card:nth-child(2){background:linear-gradient(115deg,#fff8ed,#f2fafe)}
+.voyage-people__card:hover{transform:translateY(-3px);box-shadow:0 12px 26px #1245691e}
+.voyage-people__card img{width:88px;height:88px;object-fit:contain;flex:none}
+.voyage-people__card span{display:block;min-width:0}
+.voyage-people__card small{display:block;color:#a87435;font-size:11px;font-weight:800;letter-spacing:.04em}
+.voyage-people__card strong{display:block;margin:6px 0;color:#134667;font:500 clamp(22px,2vw,29px)/1.12 Georgia,serif}
+.voyage-people__card em{display:block;color:#58758a;font-style:normal;font-size:13px}
+.voyage-people__card b{position:absolute;right:18px;top:19px;font-weight:400;color:#267c9c;font-size:25px}
+.voyage-people__card:focus-visible,.journal-all:focus-visible{outline:3px solid #bc893a;outline-offset:3px}
+@media(max-width:1020px){.news-section .news-grid{grid-template-columns:1fr;grid-template-rows:auto;gap:14px}.news-section .news-card:first-child{grid-column:1;grid-row:auto;min-height:0}.news-section .news-card:first-child>img,.news-section .news-card:first-child>.news-card__placeholder{height:275px}.news-section .news-card:not(:first-child){grid-column:1;grid-template-columns:200px minmax(0,1fr);min-height:160px}.news-section .news-card:not(:first-child)>img,.news-section .news-card:not(:first-child)>.news-card__placeholder{min-height:160px}.news-section .news-card:not(:first-child) .news-card__body{padding:20px 20px 42px}}
+@media(max-width:640px){.news-section{padding-top:32px;padding-bottom:37px}.news-section .section-heading{display:block}.news-section .section-more{display:none}.news-section .news-card:first-child>img,.news-section .news-card:first-child>.news-card__placeholder{height:195px}.news-section .news-card:first-child .news-card__body{padding:19px 18px 54px}.news-section .news-card:first-child h3{font-size:25px}.news-section .news-card:first-child p{font-size:13px}.news-section .news-card:not(:first-child){grid-template-columns:120px minmax(0,1fr);min-height:137px}.news-section .news-card:not(:first-child)>img,.news-section .news-card:not(:first-child)>.news-card__placeholder{min-height:137px}.news-section .news-card:not(:first-child) .news-card__body{padding:12px 12px 37px}.news-section .news-card:not(:first-child) h3{font-size:16px}.news-section .news-card:not(:first-child) p{display:none}.voyage-people{padding-bottom:36px}.voyage-people__grid{grid-template-columns:1fr;gap:12px}.voyage-people__card{min-height:126px;padding:15px 45px 15px 13px;gap:14px}.voyage-people__card img{width:67px;height:67px}.voyage-people__card strong{font-size:24px}}
+@media(max-width:350px){.news-section .news-card:not(:first-child){grid-template-columns:90px minmax(0,1fr)}.news-section .news-card:not(:first-child) h3{font-size:15px}.voyage-people__card img{width:52px;height:52px}}
+@media(prefers-reduced-motion:reduce){.news-section .news-card,.voyage-people__card{transition:none}}
+body.accessible .journal-card__kicker,body.accessible .voyage-people__card small{color:#000!important}
+body.accessible .voyage-people__card{background:#fff;color:#000;border:2px solid #000}

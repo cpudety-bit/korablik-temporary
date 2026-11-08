@@ -1,0 +1,11 @@
+/* Only small refinements, keeping the six approved nautical cards and legal overview style. */
+.quick-links .quick-card--project img{width:min(100%,103px);height:72px;object-fit:contain;mix-blend-mode:normal}
+.quick-links .quick-card--project:nth-of-type(3) img{width:min(100%,120px)}
+.legal-overview h2::after{content:'Важные материалы, проекты и документы из жизни детского сада';}
+.resource-section{padding-bottom:47px}
+@media(max-width:640px){
+  .quick-links .quick-card--project img{width:min(100%,84px);height:52px}
+  .quick-links .quick-card--project:nth-of-type(3) img{width:min(100%,96px)}
+  .quick-links .quick-card strong{overflow-wrap:anywhere;hyphens:auto}
+}
+@media(min-width:641px) and (max-width:1099px){.main-navigation>a{font-size:12px}.main-navigation{gap:clamp(8px,1.25vw,18px)}}

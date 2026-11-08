@@ -1,0 +1,177 @@
+/* A uniquely editorial, nautical contacts page. Source content comes unchanged from the CMS. */
+body.theme-korablik[data-page-path='/pages/contacts'] .site-main{max-width:1190px}
+body.theme-korablik[data-page-path='/pages/contacts'] .article {
+  max-width:1170px;width:100%;margin:10px auto 62px;padding:clamp(23px,3.2vw,44px);
+  border-radius:25px;background:linear-gradient(130deg,#fff,#fbfdff 86%);
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .article>h1 {
+  font-size:clamp(36px,4.8vw,59px);line-height:1.04;margin:0 0 28px;
+  letter-spacing:-.04em;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .article>.rich-text {
+  max-width:none;font-size:14px;line-height:1.65;color:#315674;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-editorial {display:grid;gap:clamp(30px,4vw,47px)}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-hero {
+  position:relative;overflow:hidden;display:grid;align-content:center;gap:14px;
+  min-height:165px;padding:28px clamp(24px,3.5vw,43px);border-radius:20px;
+  background:linear-gradient(112deg,#0c4e73 0%,#0d6487 52%,#3d92ad 100%);
+  color:#fff;isolation:isolate;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-hero::before {
+  content:'';position:absolute;inset:auto -40px -60px -50px;height:120px;
+  border:1px solid #d9f6ff35;border-radius:50%;transform:rotate(-3deg);z-index:-1;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-hero::after {
+  content:'';position:absolute;right:-30px;bottom:-88px;width:300px;height:210px;
+  border-radius:50%;border:1px solid #d7f6ff48;box-shadow:0 0 0 21px #c6edfc0b,0 0 0 43px #c6edfc0d,0 0 0 67px #c6edfc08;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-hero__watermark {
+  position:absolute;right:12%;top:5%;font:italic 140px/1 Georgia,serif;color:#d7f4ff14;user-select:none;pointer-events:none;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-hero__eyebrow {
+  display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.17em;
+  font-weight:800;text-transform:uppercase;color:#c0e8f8;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-hero__eyebrow::before{content:'';height:2px;width:32px;background:#e4b77a}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-hero__full-name p,
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-hero__full-name strong,
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-hero__full-name span{
+  display:block;position:relative;margin:0;max-width:68ch;color:#fff;
+  font:500 clamp(17px,2.1vw,24px)/1.43 Georgia,'Times New Roman',serif;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-section__eyebrow {
+  margin:0 0 5px;font-size:11px;text-transform:uppercase;letter-spacing:.14em;
+  color:#b28855;font-weight:800;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-section__title {
+  font:500 clamp(27px,3vw,38px)/1.17 Georgia,serif;color:#154568;
+  margin:0 0 20px;letter-spacing:-.025em;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-methods__grid {
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-method {
+  display:flex;align-items:flex-start;gap:15px;min-height:150px;
+  padding:23px 17px;border-radius:17px;border:1px solid #cddfe8;
+  background:linear-gradient(140deg,#f2f9fd,#fff);
+  box-shadow:0 6px 21px #0d43670d;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-method__icon {
+  flex:none;display:grid;place-items:center;width:43px;height:43px;
+  border-radius:13px;background:#deeff8;color:#207ba2;font:500 30px/1 Georgia,serif;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-method--phone .contacts-method__icon {background:#fff0d6;color:#a77632}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-method--email .contacts-method__icon {background:#e5f2eb;color:#397a75}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-method__legacy-icon {display:none}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-method__details {min-width:0}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-method__label {
+  display:block;margin:1px 0 9px;text-transform:uppercase;letter-spacing:.12em;color:#7091a4;
+  font-size:10px;font-weight:800;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-method__value,
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-method__value div,
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-method__value span {
+  color:#214b68;font-size:14px;line-height:1.62;overflow-wrap:anywhere;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-method__value :is(br){display:none}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-method__value a {font-weight:700;text-underline-offset:3px}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-actions {
+  display:flex;align-items:center;flex-wrap:wrap;gap:11px;margin-top:18px;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-actions a {
+  display:inline-flex;align-items:center;justify-content:center;min-height:43px;
+  padding:10px 23px;border-radius:30px;font-weight:750;font-size:13px;
+  text-decoration:none;transition:transform .18s ease,background .18s ease;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-actions a:hover{transform:translateY(-2px)}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-actions__primary {background:linear-gradient(#daa458,#b77c2b);color:#fff!important;box-shadow:0 5px 13px #9c6c311c}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-actions__secondary {background:#fff;color:#155a82!important;border:1px solid #a1cfdf}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-actions__quiet {background:#ecf7fb;color:#286887!important;border:1px solid #d2e6ef}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-travel {
+  position:relative;display:flex;gap:20px;align-items:flex-start;
+  padding:24px clamp(20px,3vw,34px);border-radius:18px;border:1px solid #d7e8ee;
+  background:linear-gradient(105deg,#eef9fd 0%,#f7fbfd 74%,#fffdf7 100%);
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-travel__symbol {
+  display:grid;place-items:center;flex:none;width:57px;height:57px;border-radius:50%;
+  background:#fff;border:1px solid #acd3e3;color:#c08c47;font-size:26px;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-travel__title {
+  font:500 26px/1.25 Georgia,serif;color:#19516d;margin:3px 0 11px;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-travel__body p {margin:8px 0;font-size:14px;line-height:1.65}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-travel__body p strong {color:#15577b}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-admin__grid {display:grid;grid-template-columns:1.1fr 1fr;gap:17px}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-person {
+  min-width:0;border:1px solid #dae8ef;border-radius:17px;padding:25px 23px;
+  background:#fff;box-shadow:0 7px 24px #1849630c;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-person--lead {background:linear-gradient(150deg,#f3f9fc,#fff 70%);border-top:3px solid #dcaf74}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-person--team {border-top:3px solid #7db4cd}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-person__topline {
+  padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid #dce9ef;
+  color:#a77c44;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.11em;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-person p {margin:12px 0;font-size:14px;line-height:1.62}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-person--lead>p:first-of-type {
+  color:#214f70;font:500 20px/1.42 Georgia,serif;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-person--lead>p:nth-of-type(2) {
+  margin-top:18px;font-weight:750;color:#205c7d;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-person--team>p:not(.contacts-empty) {
+  padding:12px 0;margin:0;border-bottom:1px solid #e0ecf1;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-person--team>p:last-child {border-bottom:0}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-offices__grid {
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-office {
+  min-width:0;padding:24px 23px;border-radius:17px;
+  background:#f7fbfd;border:1px solid #d5e8ef;
+  box-shadow:0 6px 21px #18496308;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-office--1 {grid-column:1/-1;background:linear-gradient(135deg,#eaf6fc,#fbfdfe)}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-office p {
+  margin:0;padding:11px 0;border-bottom:1px solid #dfedf2;
+  font-size:13.5px;line-height:1.62;overflow-wrap:anywhere;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-office p:last-child{border-bottom:0}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-office .contacts-office__original-title,
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-office .contacts-office__original-title strong {
+  border:0;margin:0 0 7px;padding:0 0 12px;color:#194d70;
+  font:500 clamp(21px,2.2vw,27px)/1.27 Georgia,serif;
+}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-editorial .contacts-empty {display:none}
+body.theme-korablik[data-page-path='/pages/contacts'] .contacts-editorial a:not(.contacts-actions a){text-underline-offset:3px}
+@media(max-width:960px){
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-methods__grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-method--address {grid-column:1/-1;min-height:105px}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-admin__grid {grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  body.theme-korablik[data-page-path='/pages/contacts'] .article {padding:18px 13px;border-radius:15px}
+  body.theme-korablik[data-page-path='/pages/contacts'] .article>h1 {font-size:clamp(34px,10vw,46px);margin-bottom:19px}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-hero {padding:23px 18px;min-height:150px;border-radius:14px}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-hero__watermark {right:2%;font-size:100px}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-hero__full-name p,
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-hero__full-name strong,
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-hero__full-name span {font-size:17px;line-height:1.43}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-editorial {gap:30px}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-methods__grid {grid-template-columns:1fr;gap:10px}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-method--address {grid-column:auto}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-method {min-height:unset;padding:19px 16px;gap:12px}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-method__icon {width:38px;height:38px;font-size:25px}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-actions {gap:9px}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-actions a {font-size:12px;min-height:40px;padding:9px 15px}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-travel {gap:12px;padding:20px 16px}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-travel__symbol {width:38px;height:38px;font-size:19px}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-travel__title {font-size:23px}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-person {padding:21px 17px}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-offices__grid {grid-template-columns:1fr;gap:12px}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-office--1 {grid-column:auto}
+  body.theme-korablik[data-page-path='/pages/contacts'] .contacts-office {padding:21px 17px}
+}
+@media(prefers-reduced-motion:reduce){body.theme-korablik[data-page-path='/pages/contacts'] .contacts-actions a{transition:none}}
+body.theme-korablik.accessible[data-page-path='/pages/contacts'] .contacts-editorial :is(.contacts-hero,.contacts-method,.contacts-person,.contacts-office,.contacts-travel) {background:#fff!important;border:2px solid #000!important;color:#000!important}

@@ -1,0 +1,9 @@
+/* Four real news items in a balanced two-by-two editorial grid. */
+.news-section .news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:stretch}
+.news-section .news-card:first-child{grid-column:auto;display:flex;flex-direction:column;min-height:0;background:#fff}
+.news-section .news-card:first-child>img,.news-section .news-card:first-child>.news-card__placeholder{height:210px;min-height:0;width:100%;object-fit:cover}
+.news-section .news-card:first-child .news-card__body{padding:19px 19px 55px}
+.news-section .news-card:first-child h3{font-size:20px;line-height:1.22}
+.news-section .news-card:first-child p{font-size:13px}
+.news-section .news-card>img{height:210px}
+@media(max-width:650px){.news-section .news-grid{grid-template-columns:1fr;gap:14px}.news-section .news-card>img,.news-section .news-card:first-child>img{height:190px}}

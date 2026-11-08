@@ -1,0 +1,21 @@
+/* New helpful parent routes: keeps the approved maritime identity. */
+.family-route{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.8fr);align-items:center;gap:clamp(18px,3vw,42px);padding-block:31px 35px;border-bottom:1px solid #deebf0}
+.family-route__intro{max-width:350px}
+.family-route__eyebrow{display:inline-flex;margin-bottom:8px;color:#a66d22;text-transform:uppercase;letter-spacing:.15em;font-size:11px;font-weight:900}
+.family-route h2{margin:0;color:#103a60;font:500 clamp(26px,2.4vw,38px)/1.12 Georgia,serif;letter-spacing:-.03em}
+.family-route__intro p{margin:12px 0 0;color:#456681;font-size:14px;line-height:1.6}
+.family-route__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.family-route__card{display:flex;align-items:center;gap:13px;min-height:88px;padding:15px 17px;background:linear-gradient(135deg,#f5fbff,#fffdfa);border:1px solid #d6e9f2;border-radius:17px;box-shadow:0 6px 19px #164b6d0d;transition:transform .2s,box-shadow .2s,border-color .2s}
+.family-route__card:hover{transform:translateY(-3px);border-color:#7eb6d4;box-shadow:0 11px 23px #164b6d1c}
+.family-route__card:focus-visible{outline:3px solid #ae782e;outline-offset:3px}
+.family-route__icon{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:14px;background:#dceefa;color:#0c668d;font-size:24px}
+.family-route__card:nth-child(2) .family-route__icon{background:#fff0d5;color:#aa7025}
+.family-route__card:nth-child(3) .family-route__icon{background:#dff2ea;color:#146d70}
+.family-route__card:nth-child(4) .family-route__icon{background:#eae7fb;color:#67629b}
+.family-route__card strong{display:block;color:#123e63;font-size:14px;line-height:1.25}
+.family-route__card small{display:block;margin-top:4px;color:#537087;font-size:11px;line-height:1.4}
+.family-route__arrow{margin-left:auto;color:#9c782f;font-size:23px}
+@media(max-width:900px){.family-route{grid-template-columns:1fr;gap:18px}.family-route__intro{max-width:680px}}
+@media(max-width:580px){.family-route{padding-block:26px}.family-route__grid{grid-template-columns:1fr;gap:9px}.family-route__card{min-height:72px;padding:12px 14px}.family-route__intro p{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.family-route__card{transition:none}}
+body.accessible .family-route__card{background:#fff;border:2px solid #000;color:#000}

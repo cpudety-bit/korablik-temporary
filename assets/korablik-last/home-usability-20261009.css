@@ -1,0 +1,11 @@
+/* Approved maritime visual style: targeted usability polish. */
+.hero__description{line-height:1.55;max-width:440px}
+.hero__buttons .btn{min-height:49px;box-shadow:0 5px 14px #315b7d25}
+.hero__buttons .btn:active,.quick-card:active{transform:translateY(1px)}
+.main-navigation>a:focus-visible,.search-toggle:focus-visible,.quick-card:focus-visible,.hero__buttons .btn:focus-visible{outline:3px solid #a56d1a;outline-offset:3px}
+.quick-card{position:relative}
+.quick-card:hover,.quick-card:focus-visible{border-color:#419fc4;box-shadow:0 11px 26px #08487526}
+.quick-card strong{line-height:1.35}
+.news-card h3 a:hover,.footer-nav a:hover{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:768px){.hero__buttons .btn{min-height:48px}.quick-card{min-height:130px}.quick-card strong{min-height:0}}
+@media(max-width:430px){.hero__eyebrow{letter-spacing:.09em}.hero__description{font-size:15px;line-height:1.5}.hero__buttons{gap:9px}.hero__buttons .btn{font-size:13px;max-width:100%;white-space:normal;line-height:1.25;padding-inline:17px}.quick-card{padding:10px 6px}.quick-card img{max-width:70px;max-height:70px}}

@@ -1,0 +1,23 @@
+/* Existing official initiatives from the legacy kindergarten website, placed below the six approved icons. */
+.important-programs{padding-top:35px;padding-bottom:25px}
+.important-programs__intro{margin-bottom:17px}
+.important-programs__intro>span{display:block;margin-bottom:6px;color:#a16a28;font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.important-programs__intro h2{margin:0;font:500 clamp(27px,2.5vw,39px)/1.17 Georgia,serif;letter-spacing:-.025em;color:#103b5e}
+.important-programs__top{display:grid;grid-template-columns:minmax(0,1fr) 220px;align-items:stretch;gap:14px}
+.important-programs__pos{min-width:0;overflow:hidden;border-radius:16px;background:#2678b8;box-shadow:0 8px 25px #12547f20}
+.important-programs__pos #js-show-iframe-wrapper{min-width:0;height:100%;min-height:265px}
+.important-programs__qr{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:14px;background:#f4faff;border:1px solid #cbe3ef;border-radius:16px;text-decoration:none;color:#103f68;text-align:center;box-shadow:0 8px 25px #12547f10}
+.important-programs__qr>span{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:#467b99;font-weight:700}
+.important-programs__qr strong{font-size:16px;line-height:1.2}
+.important-programs__qr img{width:130px;height:130px;object-fit:contain;mix-blend-mode:multiply}
+.important-programs__qr small{font-size:11px;color:#0b6598}
+.important-programs__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:17px}
+.important-programs__card{display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 14px 13px;border:1px solid #d8e9f1;border-radius:15px;background:linear-gradient(150deg,#fff,#f7fbfd);color:#10446b;text-align:center;box-shadow:0 6px 20px #12547f10;transition:transform .2s,border-color .2s}
+.important-programs__card:hover{transform:translateY(-3px);border-color:#93c2d7}
+.important-programs__card img{display:block;width:100%;height:135px;object-fit:contain}
+.important-programs__card strong{font:700 16px/1.3 'Trebuchet MS',Arial,sans-serif}
+.important-programs__card>span{margin-top:auto;color:#0c6c9d;font-size:12px;font-weight:700}
+@media(max-width:840px){.important-programs__top{grid-template-columns:minmax(0,1fr) 190px}.important-programs__card img{height:105px}}
+@media(max-width:640px){.important-programs{padding-top:25px}.important-programs__top{grid-template-columns:1fr}.important-programs__pos #js-show-iframe-wrapper{min-height:290px}.important-programs__qr{display:grid;grid-template-columns:1fr 115px;grid-template-rows:repeat(3,auto);justify-items:start;text-align:left;padding:15px;column-gap:15px}.important-programs__qr img{grid-column:2;grid-row:1/span 3;width:105px;height:105px}.important-programs__qr strong{font-size:16px}.important-programs__grid{grid-template-columns:1fr;gap:11px}.important-programs__card{display:grid;grid-template-columns:98px minmax(0,1fr);grid-template-rows:auto auto;align-items:center;column-gap:14px;text-align:left;padding:11px 13px}.important-programs__card img{width:98px;height:85px;grid-row:1/span 2}.important-programs__card strong{font-size:15px}.important-programs__card>span{margin:0;font-size:11px}}
+@media(prefers-reduced-motion:reduce){.important-programs__card{transition:none}}
+body.accessible .important-programs__card,body.accessible .important-programs__qr{background:#fff;border:2px solid #000;color:#000}

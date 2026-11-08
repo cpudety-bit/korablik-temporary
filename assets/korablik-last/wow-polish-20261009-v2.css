@@ -1,0 +1,321 @@
+@charset "UTF-8";
+/*
+ * Кораблик — художественная полировка утверждённого последнего макета.
+ * Только главная new.korablik-7.ru, отдельный слой оформления.
+ * Не влияет на CMS, новости, баннеры, документы и административную панель.
+ */
+:root {
+  --sail-blue: #0f436a;
+  --sail-gold: #c5914e;
+  --sail-sky: #dfedf7;
+  --sail-foam: #e5f8fc;
+}
+
+/* 1. Море и золотой свет — визуальная глубина без замены иллюстрации. */
+.hero {
+  background:
+    radial-gradient(ellipse 35% 45% at 91% 61%, #fff4d454, transparent 72%),
+    linear-gradient(110deg,#c3e7fc 0%,#dff0fa 33%,#d4e7f3 59%,#f8ddb0 100%);
+}
+.hero::before,
+.hero::after {
+  content:"";
+  position:absolute;
+  pointer-events:none;
+  display:block;
+}
+.hero::before {
+  z-index:2;
+  right:-2%;
+  bottom:1%;
+  width:43%;
+  height:48%;
+  background:
+    radial-gradient(ellipse 45% 38% at 79% 25%,#fffbd486,transparent 95%),
+    linear-gradient(105deg,transparent 26%,#fff4c126 49%,transparent 64%);
+  mix-blend-mode:screen;
+  opacity:.52;
+  transform-origin:80% 30%;
+  animation:sea-sunlight 11s ease-in-out infinite alternate;
+}
+.hero::after {
+  z-index:2;
+  bottom:0;
+  left:-5%;
+  width:110%;
+  height:88px;
+  background:
+    radial-gradient(ellipse 100px 9px at 18% 60%, #dff9ff6b 0 35%, transparent 75%) 0 0/330px 38px repeat-x,
+    radial-gradient(ellipse 90px 7px at 54% 50%, #fffbe04f 0 31%, transparent 76%) 0 18px/245px 27px repeat-x;
+  opacity:.4;
+  animation:sea-surface 22s linear infinite;
+}
+.hero__art {
+  transform-origin:65% 76%;
+  animation:ship-breathe 19s ease-in-out infinite alternate;
+  backface-visibility:hidden;
+}
+.hero__water {
+  filter:saturate(1.06);
+  animation:water-glide 17s ease-in-out infinite alternate;
+}
+.hero__sky::before {
+  animation:cloud-breath 28s ease-in-out infinite alternate;
+}
+.hero__sky::after {
+  animation:cloud-breath-2 35s ease-in-out infinite alternate;
+}
+.hero__eyebrow {
+  color:#386c8a;
+  letter-spacing:.19em;
+}
+.hero h1 {
+  text-shadow:0 2px 0 #fff7, 0 12px 36px #1c4b7421;
+}
+.hero__content .hero__eyebrow {animation:sail-intro .75s cubic-bezier(.22,1,.36,1) both}
+.hero__content h1 {animation:sail-intro .9s .12s cubic-bezier(.22,1,.36,1) both}
+.hero__content .hero__description {animation:sail-intro .95s .23s cubic-bezier(.22,1,.36,1) both}
+.hero__content .hero__buttons {animation:sail-intro 1s .34s cubic-bezier(.22,1,.36,1) both}
+.btn {
+  transition:transform .22s ease,background .22s ease,box-shadow .22s ease,filter .22s ease;
+}
+.btn--gold:hover {
+  background:linear-gradient(180deg,#e3b36c,#b67a2d);
+  box-shadow:0 9px 22px #85552240;
+}
+.btn--white:hover,
+.btn--outline:hover {
+  background:#f4fcff;
+  box-shadow:0 9px 20px #0b5d8b20;
+}
+.btn:focus-visible,.quick-card:focus-visible,.news-card a:focus-visible,.resource-card:focus-visible {
+  outline:3px solid #da973d;
+  outline-offset:4px;
+}
+
+/* 2. Переход между морем и разделами — белая пена и лёгкая воздушность. */
+.quick-links {
+  margin-top:-17px;
+  border:1px solid #e2ecf0;
+  border-radius:18px;
+  background:#ffffffef;
+  box-shadow:0 12px 37px #123e6021,0 2px 8px #123e5d0c;
+  backdrop-filter:blur(8px);
+}
+.quick-card {
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  border:1px solid #ddeaf1;
+  background:linear-gradient(158deg,#fff 0%,#f9fcff 58%,#eff8fb 100%);
+  box-shadow:0 3px 15px #0b41620e;
+  transition:transform .3s cubic-bezier(.22,1,.36,1),
+    box-shadow .3s ease,border-color .3s ease;
+}
+.quick-card::before {
+  content:"";
+  position:absolute;
+  inset:-30% auto -30% -85%;
+  z-index:-1;
+  width:62%;
+  background:linear-gradient(105deg,transparent 12%,#ffffffb8 52%,transparent 83%);
+  transform:skewX(-12deg);
+  transition:left .72s cubic-bezier(.22,1,.36,1);
+  pointer-events:none;
+}
+.quick-card:hover,.quick-card:focus-visible {
+  transform:translateY(-5px);
+  border-color:#9fcfe2;
+  box-shadow:0 14px 30px #0c568a22;
+}
+.quick-card:hover::before,.quick-card:focus-visible::before {left:122%}
+.quick-card img {
+  transition:transform .42s cubic-bezier(.22,1,.36,1),filter .42s ease;
+}
+.quick-card:hover img,.quick-card:focus-visible img {
+  transform:translateY(-4px) scale(1.035);
+  filter:drop-shadow(0 6px 8px #155b8c18);
+}
+.circle-arrow {transition:background .25s,color .25s,transform .25s}
+.quick-card:hover .circle-arrow,.quick-card:focus-visible .circle-arrow {
+  background:#0a689a;color:#fff;transform:translateX(3px);
+}
+
+/* 3. Новости — журнальные карточки и плавный вход секции в семейную часть. */
+.news-section {
+  position:relative;
+  padding-bottom:51px;
+}
+.news-section::after { display:none; }
+.news-card {
+  border-radius:13px;
+  border-color:#e3ebf0;
+  box-shadow:0 7px 23px #1c4f7611;
+  transition:transform .3s cubic-bezier(.22,1,.36,1),
+    box-shadow .3s ease,border-color .3s ease;
+}
+.news-card:hover,.news-card:focus-within {
+  transform:translateY(-5px);
+  border-color:#bad9e8;
+  box-shadow:0 17px 36px #0a4b781d;
+}
+.news-card>img {
+  transition:transform .65s cubic-bezier(.22,1,.36,1),filter .65s ease;
+}
+.news-card:hover>img,.news-card:focus-within>img {
+  transform:scale(1.035);
+  filter:saturate(1.06);
+}
+.news-card__body>a {
+  transition:background .22s ease,color .22s ease,transform .22s ease;
+}
+.news-card:hover .news-card__body>a,
+.news-card:focus-within .news-card__body>a {
+  background:#0b6c9c;color:#fff;transform:translateX(2px);
+}
+.section-heading h2 {
+  text-shadow:0 2px 14px #d4e7ef50;
+}
+.flourish {transition:transform .3s ease}
+.section-heading:hover .flourish{transform:translate(4px,5px)}
+
+/* 4. Семейный блок — сохранить героев иллюстрации и добавить мягкий свет. */
+.parents-banner::before {
+  content:"";
+  position:absolute;
+  z-index:3;
+  pointer-events:none;
+  inset:0 0 auto;
+  height:34px;
+  background:linear-gradient(180deg,rgba(255,255,255,.93),rgba(255,255,255,.5) 39%,transparent 100%);
+}
+.parents-banner::after {
+  content:"";
+  position:absolute;
+  z-index:2;
+  pointer-events:none;
+  right:1%;
+  top:6%;
+  width:42%;
+  height:72%;
+  border-radius:50%;
+  background:radial-gradient(ellipse,#fff2d23d,transparent 68%);
+  animation:family-sunlight 14s ease-in-out infinite alternate;
+}
+
+/* 5. Реальные официальные логотипы остаются целыми; ощущение единой коллекции. */
+.resource-card {
+  min-height:86px;
+  border-radius:13px;
+  border-color:#e0eaf0;
+  background:linear-gradient(158deg,#fff 30%,#f8fcff);
+  box-shadow:0 4px 15px #144c6f10;
+  transition:transform .26s ease,box-shadow .26s ease,border-color .26s ease;
+}
+.resource-card:hover,.resource-card:focus-visible {
+  transform:translateY(-4px);
+  border-color:#9dcbdf;
+  box-shadow:0 12px 25px #13568018;
+}
+.resource-card img {object-fit:contain;filter:drop-shadow(0 2px 2px #2f77920c)}
+.more-resources,.family-information {border-radius:13px}
+
+/* 6. Тёмное море в подвале — красивое завершение пути. */
+.site-footer {
+  background:linear-gradient(115deg,#0b597e 0%,#063b5d 48%,#073755 100%);
+}
+.site-footer::before {
+  background:
+    radial-gradient(ellipse 440px 105px at 30% 1%,#54bee022 0%,transparent 72%),
+    repeating-linear-gradient(172deg,transparent 0 32px,#87d7e514 34px 37px,transparent 38px 69px);
+  animation:deep-sea-glimmer 22s ease-in-out infinite alternate;
+}
+
+/* Entrance on scroll: no hidden content when JS is disabled or before scrolling. */
+.motion-entered {
+  animation:section-arrive .72s cubic-bezier(.22,1,.36,1) both;
+}
+@keyframes sail-intro {
+  from {opacity:0;transform:translate3d(0,13px,0)}
+  to {opacity:1;transform:translate3d(0,0,0)}
+}
+@keyframes ship-breathe {
+  from {transform:translate3d(0,0,0) scale(1)}
+  to {transform:translate3d(-3px,-3px,0) scale(1.006)}
+}
+@keyframes sea-sunlight {
+  from {opacity:.39;transform:scale(.96) rotate(-2deg)}
+  to {opacity:.68;transform:scale(1.05) rotate(1deg)}
+}
+@keyframes sea-surface {
+  from {background-position:0 0,0 18px;opacity:.31}
+  to {background-position:260px 0,-165px 18px;opacity:.48}
+}
+@keyframes water-glide {
+  from {background-position:center bottom;opacity:.63}
+  to {background-position:calc(50% + 9px) bottom;opacity:.75}
+}
+@keyframes cloud-breath {
+  from {transform:translate3d(0,0,0) rotate(-7deg);opacity:.8}
+  to {transform:translate3d(22px,-4px,0) rotate(-5deg);opacity:.95}
+}
+@keyframes cloud-breath-2 {
+  from {transform:translate3d(0,0,0) rotate(-7deg);opacity:.8}
+  to {transform:translate3d(-18px,2px,0) rotate(-8deg);opacity:1}
+}
+@keyframes family-sunlight {
+  from {opacity:.32;transform:scale(.96)}
+  to {opacity:.7;transform:scale(1.04)}
+}
+@keyframes deep-sea-glimmer {
+  from {background-position:0 0,0 0;opacity:.15}
+  to {background-position:25px 2px,65px 0;opacity:.24}
+}
+@keyframes section-arrive {
+  from {opacity:.75;transform:translate3d(0,13px,0)}
+  to {opacity:1;transform:translate3d(0,0,0)}
+}
+
+/* Touch devices get the artwork without perpetual motion. */
+@media (max-width:640px) {
+  .hero__art,.hero__water,.hero__sky::before,.hero__sky::after,
+  .hero::before,.hero::after,.parents-banner::after,.site-footer::before {
+    animation:none;
+  }
+  .hero::before {opacity:.42}
+  .hero::after {height:66px;opacity:.25}
+  .hero__content .hero__eyebrow,.hero__content h1,
+  .hero__content .hero__description,.hero__content .hero__buttons {
+    animation-duration:.42s;
+  }
+  .news-section{padding-bottom:39px}
+  .resource-card{min-height:70px}
+}
+@media(hover:none) {
+  .quick-card:hover,.news-card:hover,.resource-card:hover{transform:none}
+  .quick-card:hover img,.news-card:hover>img{transform:none}
+}
+@media(prefers-reduced-motion:reduce) {
+  .hero,.hero *,.hero::before,.hero::after,.quick-card,
+  .quick-card::before,.news-card,.news-card>img,.resource-card,
+  .parents-banner::after,.site-footer::before,.motion-entered {
+    animation:none!important;transition:none!important;
+    transform:none!important;
+  }
+}
+body.accessible .hero::before,
+body.accessible .hero::after,
+body.accessible .parents-banner::before,
+body.accessible .parents-banner::after,
+body.accessible .news-section::after {
+  display:none!important;
+}
+body.accessible *,body.accessible *::before,body.accessible *::after {
+  animation:none!important;
+  transition:none!important;
+}
+body.accessible .news-card,
+body.accessible .quick-card,
+body.accessible .resource-card {
+  transform:none!important;
+}

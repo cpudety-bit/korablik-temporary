@@ -1,0 +1,13 @@
+/* Accessible official-information cards, respecting the approved maritime palette. */
+.legal-overview{padding-block:57px 62px;border-top:1px solid #e2edf1}
+.legal-overview h2{font:500 clamp(31px,3.3vw,47px)/1.14 Georgia,'Times New Roman',serif;letter-spacing:-.025em;color:#103b61;margin:0 0 12px;max-width:950px}
+.legal-overview h2::after{content:'Официальные документы, сведения о работе детского сада и информация для родителей';display:block;margin:14px 0 28px;color:#50718b;font:400 16px/1.55 'Trebuchet MS',Arial,sans-serif;letter-spacing:0}
+.legal-overview-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.legal-overview-grid a{position:relative;min-height:94px;padding:20px 19px 20px 23px;border-radius:16px;background:linear-gradient(145deg,#fbfdff,#edf7fc);border:1px solid #cfe4ef;box-shadow:0 5px 16px #174b6f10;color:#113e64;font-size:17px;font-weight:700;line-height:1.35;overflow-wrap:anywhere;transition:transform .2s,border-color .2s,box-shadow .2s}
+.legal-overview-grid a:hover{background:linear-gradient(145deg,#fff,#e7f4fb);border-color:#7eb8d5;transform:translateY(-3px);box-shadow:0 11px 22px #174b6f20}
+.legal-overview-grid a:focus-visible{outline:3px solid #b27c28;outline-offset:3px}
+.legal-overview-grid a span{flex:0 0 34px;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#d9ecf6;color:#0b638f;font-size:23px;font-weight:400}
+@media(max-width:1050px){.legal-overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:660px){.legal-overview{padding-block:39px 44px}.legal-overview h2{font-size:clamp(29px,8vw,37px)}.legal-overview h2::after{font-size:14px;margin:12px 0 22px}.legal-overview-grid{grid-template-columns:1fr;gap:10px}.legal-overview-grid a{font-size:17px;min-height:76px;padding:17px 16px 17px 19px}}
+@media(prefers-reduced-motion:reduce){.legal-overview-grid a{transition:none}.legal-overview-grid a:hover{transform:none}}
+body.accessible .legal-overview-grid a{background:#fff!important;border:2px solid #000!important;color:#000!important;font-size:1.15em}
